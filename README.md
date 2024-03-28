@@ -1,3 +1,6 @@
+# 🧠  Brain Games
+[![asciicast](https://asciinema.org/a/YKZZMw0L5OnEwg0BPPwYgS4TK.svg)](https://asciinema.org/a/YKZZMw0L5OnEwg0BPPwYgS4TK)
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/AINER/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/AINER/frontend-project-44/actions)
 
