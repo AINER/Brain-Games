@@ -19,7 +19,7 @@ const startGame = (playerName, gameRules, prepareQuestion, giveCorrectAnswer) =>
 
     const answer = readlineSync.question('Your answer: ');
 
-    if (correctAnswer === answer) {
+    if (correctAnswer.toString() === answer) {
       console.log('👌  Correct!');
       numberOfCorrectAnswers += 1;
     } else {
