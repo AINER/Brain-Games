@@ -1,13 +1,5 @@
 const gameRules = 'Find the greatest common divisor of given numbers.';
 
-const prepareQuestion = () => {
-  const maxNumber = 100;
-  const firstNumber = Math.floor(Math.random() * maxNumber);
-  const secondNumber = Math.floor(Math.random() * maxNumber);
-  const question = `${firstNumber} ${secondNumber}`;
-  return question;
-};
-
 const greatCommonDivisor = (a, b) => {
   if (b === 0) {
     return a;
@@ -15,21 +7,20 @@ const greatCommonDivisor = (a, b) => {
   return greatCommonDivisor(b, a % b);
 };
 
-const giveCorrectAnswer = (question) => {
-  const dividedElements = question.split(' ');
-  let a;
-  let b;
-  if (parseInt(dividedElements[0], 10) > parseInt(dividedElements[1], 10)) {
-    a = parseInt(dividedElements[0], 10);
-    b = parseInt(dividedElements[1], 10);
+const prepareQuestionAndCorrectAnswer = () => {
+  const maxNumber = 100;
+  const firstNumber = Math.floor(Math.random() * maxNumber);
+  const secondNumber = Math.floor(Math.random() * maxNumber);
+  const question = `${firstNumber} ${secondNumber}`;
+
+  let correctAnswer;
+  if (firstNumber > secondNumber) {
+    correctAnswer = greatCommonDivisor(firstNumber, secondNumber);
   } else {
-    a = parseInt(dividedElements[1], 10);
-    b = parseInt(dividedElements[0], 10);
+    correctAnswer = greatCommonDivisor(secondNumber, firstNumber);
   }
 
-  const correctAnswer = greatCommonDivisor(a, b);
-
-  return correctAnswer;
+  return [question, correctAnswer];
 };
 
-export { gameRules, prepareQuestion, giveCorrectAnswer };
+export { gameRules, prepareQuestionAndCorrectAnswer };

@@ -7,13 +7,12 @@ const greeting = () => {
   return playerName;
 };
 
-const startGame = (playerName, gameRules, prepareQuestion, giveCorrectAnswer) => {
+const startGame = (playerName, gameRules, prepareQuestionAndCorrectAnswer) => {
   console.log(`${gameRules}`);
 
   let numberOfCorrectAnswers = 0;
   while (numberOfCorrectAnswers < 3) {
-    const question = prepareQuestion();
-    const correctAnswer = giveCorrectAnswer(question);
+    const [question, correctAnswer] = prepareQuestionAndCorrectAnswer();
 
     console.log(`Question: ${question}`);
 
