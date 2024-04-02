@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const greating = () => {
+const greeting = () => {
   console.log('🧠  Welcome to the Brain Games!');
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`👋  Hello, ${playerName}`);
@@ -31,4 +31,4 @@ const startGame = (playerName, gameRules, prepareQuestion, giveCorrectAnswer) =>
   return console.log(`🎉  Congratulations, ${playerName}!`);
 };
 
-export { startGame, greating };
+export { startGame, greeting };
