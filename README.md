@@ -12,8 +12,9 @@
    
     ![Screenshot 2024-04-02 224239](https://github.com/AINER/frontend-project-44/assets/101467664/c71b3121-511b-4eb3-af33-de7ae82a805c)
 
-3. Open a command shell of your operating system, go to the game's root directory and run `npm link`
-4. Run one of the following names of the game to start:
+3. Open a command shell of your operating system and run a command to go to the game directory
+4. Run `npm link`
+5. Run one of the following names of the game to start:
    - brain-even
    - brain-calc
    - brain-gcd
