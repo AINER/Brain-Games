@@ -20,7 +20,7 @@ const prepareQuestionAndCorrectAnswer = () => {
     i += 1;
   }
 
-  const replacement = '...';
+  const replacement = '..';
   const positionOfReplacement = Math.floor(Math.random() * progressionOfNumbers.length);
   const correctAnswer = progressionOfNumbers[positionOfReplacement];
   progressionOfNumbers[positionOfReplacement] = replacement;
