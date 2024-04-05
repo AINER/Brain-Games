@@ -1,8 +1,9 @@
+import { getRandomNumber } from './general-in-game-logic.js';
+
 const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const prepareQuestionAndCorrectAnswer = () => {
-  const maxNumber = 100;
-  const question = Math.floor(Math.random() * maxNumber);
+  const question = getRandomNumber();
 
   const isEven = question % 2 === 0;
   const correctAnswer = isEven ? 'yes' : 'no';

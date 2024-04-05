@@ -1,15 +1,16 @@
+import { getRandomNumber } from './general-in-game-logic.js';
+
 const gameRules = 'What number is missing in the progression?';
 
 const prepareQuestionAndCorrectAnswer = () => {
   const progressionOfNumbers = [];
-  const maxValueOfFirstNumber = 100;
-  const firstNumber = Math.floor(Math.random() * maxValueOfFirstNumber);
+  const firstNumber = getRandomNumber();
   progressionOfNumbers.push(firstNumber);
 
   const minLength = 5;
   const maxLength = 10;
   const lengthOfProgression = Math.floor(Math.random() * (maxLength - minLength) + minLength);
-  const maxStepOfProgression = 100;
+  const maxStepOfProgression = 150;
   const stepOfProgression = Math.floor(Math.random() * maxStepOfProgression);
 
   let i = 1;
@@ -19,13 +20,12 @@ const prepareQuestionAndCorrectAnswer = () => {
     i += 1;
   }
 
-  const replacement = '..';
+  const replacement = '...';
   const positionOfReplacement = Math.floor(Math.random() * progressionOfNumbers.length);
   const correctAnswer = progressionOfNumbers[positionOfReplacement];
   progressionOfNumbers[positionOfReplacement] = replacement;
 
-  const pattern = /,/g;
-  const question = progressionOfNumbers.toString().replace(pattern, ' ');
+  const question = progressionOfNumbers.join(' ');
 
   return [question, correctAnswer];
 };

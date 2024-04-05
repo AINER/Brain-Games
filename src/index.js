@@ -7,7 +7,8 @@ const greeting = () => {
   return playerName;
 };
 
-const startGame = (playerName, gameRules, prepareQuestionAndCorrectAnswer) => {
+const startGame = (gameRules, prepareQuestionAndCorrectAnswer) => {
+  const playerName = greeting();
   console.log(`${gameRules}`);
 
   let numberOfCorrectAnswers = 0;

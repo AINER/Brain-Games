@@ -1,9 +1,10 @@
+import { getRandomNumber } from './general-in-game-logic.js';
+
 const gameRules = 'What is the result of the expression?';
 
 const prepareQuestionAndCorrectAnswer = () => {
-  const maxNumber = 100;
-  const firstNumber = Math.floor(Math.random() * maxNumber);
-  const secondNumber = Math.floor(Math.random() * maxNumber);
+  const firstNumber = getRandomNumber();
+  const secondNumber = getRandomNumber();
 
   const mathOperators = ['+', '-', '*'];
   const maxIndexOfArray = 2;
