@@ -1,3 +1,5 @@
+import { getRandomNumber } from './general-in-game-logic.js';
+
 const gameRules = 'Find the greatest common divisor of given numbers.';
 
 const greatCommonDivisor = (a, b) => {
@@ -8,9 +10,9 @@ const greatCommonDivisor = (a, b) => {
 };
 
 const prepareQuestionAndCorrectAnswer = () => {
-  const maxNumber = 100;
-  const firstNumber = Math.floor(Math.random() * maxNumber);
-  const secondNumber = Math.floor(Math.random() * maxNumber);
+  const maxValueOfRandomNumber = 150;
+  const firstNumber = getRandomNumber(maxValueOfRandomNumber);
+  const secondNumber = getRandomNumber(maxValueOfRandomNumber);
   const question = `${firstNumber} ${secondNumber}`;
 
   let correctAnswer;
