@@ -1,4 +1,4 @@
-import { getRandomNumber } from './general-in-game-logic.js';
+import { getRandomNumberWithMaxCap } from './general-in-game-logic.js';
 
 const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -20,7 +20,7 @@ const isPrime = (number) => {
 
 const prepareQuestionAndCorrectAnswer = () => {
   const maxValueOfRandomNumber = 20;
-  const question = getRandomNumber(maxValueOfRandomNumber);
+  const question = getRandomNumberWithMaxCap(maxValueOfRandomNumber);
 
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
