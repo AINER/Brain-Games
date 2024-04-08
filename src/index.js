@@ -11,14 +11,14 @@ const startGame = (gameRules, prepareQuestionAndCorrectAnswer) => {
   const playerName = greeting();
   console.log(`${gameRules}`);
 
+  const requiredNumberOfCorrectAnswers = 3;
   let numberOfCorrectAnswers = 0;
-  while (numberOfCorrectAnswers < 3) {
+  while (numberOfCorrectAnswers < requiredNumberOfCorrectAnswers) {
     const [question, correctAnswer] = prepareQuestionAndCorrectAnswer();
 
     console.log(`Question: ${question}`);
 
     const answer = readlineSync.question('Your answer: ');
-
     if (correctAnswer.toString() === answer) {
       console.log('👌  Correct!');
       numberOfCorrectAnswers += 1;
