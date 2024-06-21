@@ -1,6 +1,7 @@
 # 🧠  Brain Games
-#### Welcome to the Brain Games!
-#### Here you can rack your brain and test your mind strength. The series of 5 games awaits you, which will allow you to sharpen your mathematical skills to the point of the sharpest blade.
+__Welcome to the Brain Games!__
+
+__Here you can rack your brain and test your mind strength. The series of 5 games awaits you, which will allow you to sharpen your mathematical skills to the point of the sharpest blade.__
 
 [![asciicast](https://asciinema.org/a/YKZZMw0L5OnEwg0BPPwYgS4TK.svg)](https://asciinema.org/a/YKZZMw0L5OnEwg0BPPwYgS4TK)
 
@@ -21,7 +22,7 @@
    - brain-progression
    - brain-prime
 
- #### Good luck and may the power of your mind be with you!
+__Good luck and may the power of your mind be with you!__
 
 ##
 <a href="https://codeclimate.com/github/AINER/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/4c4556a7868c5575a7c7/maintainability" /></a>
